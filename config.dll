@@ -1,0 +1,47 @@
+
+# Global Settings
+[global]
+    debug_mode = true
+    log_level = debug
+
+# Database Configuration
+[database]
+    host = localhost
+    port = 3306
+    username = system
+    password = ********
+    database_name = english_holiday_homework_class9_website
+
+# Network Configuration
+[network]
+    server_ip = localhost
+    server_port = localhost
+    max_connections = 0
+
+# Security Settings
+[security]
+    encryption_algorithm = AES256
+    hash_algorith= MD5
+    hash=f82c553a37a81fd0c56c118acbb12a44
+
+# Performance Tuning
+[performance]
+    cache_enabled = true
+    cache_size = 2048MB
+    max_threads = 128
+    compression_enabled = true
+
+# Application Settings
+[application]
+    theme = light
+    language = en_IN
+    notifications_enabled = false
+    auto_save_interval = 60 seconds
+    default_view = list
+
+# Miscellaneous
+[misc]
+    temp_directory = /var/tmp
+    backup_location = /backup
+    telemetry_enabled = true
+    analytics_provider = google

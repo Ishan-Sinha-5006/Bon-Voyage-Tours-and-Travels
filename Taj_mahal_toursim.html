@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Booking and Activities</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+    
+        .container {
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px 5px 0 0;
+        }
+        .card button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 15px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .booking-form input, .booking-form select, .booking-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="Taj_mahal.html">Taj Mahal</a></li>
+            <li><a href="fatehpur-sikri.html">Fatehpur Sikri</a></li>
+            <li><a href="agra-fort.html"> Agra fort</a></li>
+
+        </ul>
+        </nav>
+    <div class="container" id="booking">
+        <h2 style="color: white;">Book Your Tickets</h2>
+        <form class="booking-form">
+            <label for="date" style="color:black; !important">Select Date</label>
+            <input type="date" id="date" name="date" required>
+            <label for="tickets" style="color: black; !important">Number of Tickets</label>
+            <input type="number" id="tickets" name="tickets" min="1" max="10" required>
+            <label style="color:black">Choose your attraction</label>
+            <select id="book_attraction_dropdown" required>
+                <option value="Taj Mahal">Taj Mahal</option>
+                <option value="Fatehpur sikri">fatehpur sikri</option>
+                <option value="agra fort">Agra fort</option>
+            </select>
+            <button type="submit" id="book">Book Now</button>
+        </form>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@touristbooking.com</p>
+        <p>Phone: +91 965 033 3257</p>
+        <p>Address: Taj Mahal</p>
+    </div>
+    <script>
+        function book_tickets(event) {
+            event.preventDefault(); // Prevent form submission
+            var tickets = document.getElementById('tickets').value;
+            alert('Your booking is successful');
+            alert('Number of tickets: ' + tickets);
+        }
+
+        document.getElementById('book').addEventListener('click', book_tickets);
+    </script>
+</body>
+</html>
